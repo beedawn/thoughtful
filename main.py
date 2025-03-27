@@ -12,7 +12,7 @@ with open ('data.json', 'r') as file:
             cont = False
             break
         for question in data['questions']:
-            if question['question'] == user_question:
+            if question['question'].lower() == user_question.lower():
                 print(question['answer'])
                 found = True
 
