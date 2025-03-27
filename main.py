@@ -3,13 +3,11 @@ import json
 
 with open ('data.json', 'r') as file:
     data = json.load(file)
-    cont = True
-    while (cont is not False):
+    while (True):
         found = False
         user_question = input("Enter your question (Enter 'q' to quit):\n")
 
         if user_question.lower() == "q":
-            cont = False
             break
         for question in data['questions']:
             if question['question'].lower() == user_question.lower():
